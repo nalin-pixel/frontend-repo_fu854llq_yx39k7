@@ -43,4 +43,25 @@
     --tw-exit-translate-x: initial;
     --tw-exit-translate-y: initial;
   }
+
+  /* Steam animations - soft, subtle, performance-friendly */
+  @keyframes steamFloat {
+    0% { transform: translate3d(0, 10px, 0) scale(1); opacity: .45; }
+    50% { transform: translate3d(0, -6px, 0) scale(1.03); opacity: .6; }
+    100% { transform: translate3d(0, 10px, 0) scale(1); opacity: .45; }
+  }
+  @keyframes steamDrift {
+    0% { transform: translate3d(-10px, 0, 0) scale(1); opacity: .35; }
+    50% { transform: translate3d(8px, -4px, 0) scale(1.02); opacity: .5; }
+    100% { transform: translate3d(-10px, 0, 0) scale(1); opacity: .35; }
+  }
+  @keyframes steamRise {
+    0% { transform: translate3d(0, 20px, 0) scale(0.98); opacity: .3; }
+    50% { transform: translate3d(0, -8px, 0) scale(1.02); opacity: .45; }
+    100% { transform: translate3d(0, 20px, 0) scale(0.98); opacity: .3; }
+  }
+
+  .animate-steam-float { animation: steamFloat 7s ease-in-out infinite; }
+  .animate-steam-drift { animation: steamDrift 9s ease-in-out infinite; }
+  .animate-steam-rise { animation: steamRise 6.5s ease-in-out infinite; }
 }
